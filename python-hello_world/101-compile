@@ -1,0 +1,34 @@
+#!/bin/bash
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set." >&2
+    exit 1
+fi
+
+echo "Compiling $PYFILE ..."
+
+python3 -c "
+import py_compile
+import os
+import sys
+
+source_file = os.environ.get('PYFILE')
+
+if source_file:
+    try:
+        target_file = source_file + 'c'
+        py_compile.compile(source_file, cfile=target_file, doraise=True)
+        
+    except py_compile.PyCompileError as e:
+        sys.stderr.write(f'Error compiling {source_file}: {e}\n')
+        exit(1)
+    except FileNotFoundError:
+        sys.stderr.write(f'Error: File not found: {source_file}\n')
+        exit(1)
+else:
+    sys.stderr.write('Error: PYFILE environment variable is missing.\n')
+    exit(1)
+"
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
