@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-str1 = "object-oriented programming"
-str2 = "Python"
-str1 = str1 + " with " + str2 # Reassigns str1 to the full sentence
-print(str1)
+str1 = "Holberton"
+str2 = "School"
+str3 = "Welcome to " + str1 + " " + str2 + "!"
+print(str3)
