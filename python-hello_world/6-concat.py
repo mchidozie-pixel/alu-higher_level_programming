@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 str1 = "Welcome to "
-str2 = "Battery School!"
-# Use str1 and str2 in the print statement
+str2 = "Holberton School!"
+# Concatenate str1 and str2 and print exactly
 print(str1 + str2)
+
