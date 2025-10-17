@@ -1,0 +1,4 @@
+#!/bin/bash
+# This script runs the Python file stored in $PYFILE
+
+python3 "$PYFILE"
