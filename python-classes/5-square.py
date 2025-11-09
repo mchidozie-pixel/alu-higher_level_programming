@@ -1,22 +1,18 @@
-my_square = Square(3)
-my_square.my_print()
-# ###
-# ###
-# ###
 
-my_square.size = 10
-my_square.my_print()
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
-# ##########
+File is present
 
-my_square.size = 0
-my_square.my_print()
-# (prints an empty line)
+First line contains #!/usr/bin/python3
+
+You are not allowed to import any module
+
+Module is documented
+
+Class is documented
+
+Correct output - case: mysquare = Square(3) mysquare.my_print()
+
+Correct output - case: mysquare = Square(10) mysquare.my_print()
+
+Correct output - case: mysquare = Square(0) mysquare.my_print()
+
+PEP8 validation
