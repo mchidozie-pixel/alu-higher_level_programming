@@ -8,7 +8,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Load existing list if file exists, otherwise start with an empty list
+# Load the existing list if file exists, otherwise create a new one
 if path.exists(filename):
     items = load_from_json_file(filename)
 else:
@@ -17,5 +17,5 @@ else:
 # Add all command-line arguments (excluding script name)
 items.extend(sys.argv[1:])
 
-# Save the updated list
+# Save the updated list back to the file
 save_to_json_file(items, filename)
