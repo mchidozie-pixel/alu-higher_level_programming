@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""MyList module"""
-
-def _import_(name):
-    module = __import__(name)
-    return module
+"""Module 1-my_list.
+Creates a class inheriting from the list class.
+"""
 
 
 class MyList(list):
-    """A class that inherits from list"""
+    """Class MyList inherits from list."""
 
     def print_sorted(self):
-        """Prints the list but sorted (ascending sort)"""
-        print(sorted(self))
+        """Prints the list, in ascending sort."""
+
+        new_list = self[:]
+        new_list.sort()
+        print("{}".format(new_list))
