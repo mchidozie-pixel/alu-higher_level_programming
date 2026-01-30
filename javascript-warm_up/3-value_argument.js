@@ -1,4 +1,7 @@
 #!/usr/bin/node
-console.log('C is fun');
-console.log('Python is cool');
-console.log('JavaScript is amazing');
+const x = process.argv.slice(2);
+if (x[0] === undefined) {
+  console.log('No argument');
+} else {
+  console.log(x[0]);
+}
